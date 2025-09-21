@@ -61,4 +61,12 @@ class AuthController extends Controller
             'message' => 'Logout berhasil',
         ]);
     }
+
+    public function user(Request $request)
+    {
+        return response()->json([
+            "message" => "User data retrieved successfully",
+            "user" => $request->user(),
+        ],200);
+    }
 }
